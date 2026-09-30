@@ -131,10 +131,13 @@ canvas#fx{position:absolute;inset:0;width:100%;height:100%;pointer-events:none;z
 }
 
 /* 標題區塊：在畫面頂端和蛋糕之間上下置中 */
+/* 畫框在最上面，暱稱和「生日快樂」放在畫框和蛋糕之間的正中間 */
 .headline{
   bottom:calc(3% + min(37vw,185px) + 16px);
   display:flex;
   flex-direction:column;
-  justify-content:center;
   align-items:center;
 }
+.headline .frame-wrap{order:-1}        /* 畫框排到最上面 */
+.headline .who{margin-top:auto}        /* 暱稱上方的空白自動撐開 */
+.headline .hb{margin-bottom:auto}      /* 生日快樂下方的空白自動撐開 */
