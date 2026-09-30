@@ -141,3 +141,15 @@ canvas#fx{position:absolute;inset:0;width:100%;height:100%;pointer-events:none;z
 .headline .frame-wrap{order:-1}        /* 畫框排到最上面 */
 .headline .who{margin-top:auto}        /* 暱稱上方的空白自動撐開 */
 .headline .hb{margin-bottom:auto}      /* 生日快樂下方的空白自動撐開 */
+
+/* ===== 放大：畫框、熊、蛋糕 ===== */
+
+/* 畫框（熊的大小是跟著畫框算的，所以會一起變大） */
+.frame-wrap{width:clamp(140px,34vw,260px)}
+.photo::before,.photo::after{box-shadow:calc(clamp(140px,34vw,260px) - 4px) 0 0 0 #d9a441}
+
+/* 蛋糕 */
+.cake{width:min(50vw,300px)}
+
+/* 蛋糕變高了，標題區塊的底部也要跟著往上讓 */
+.headline{bottom:calc(3% + min(46vw,277px) + 16px)}
