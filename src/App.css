@@ -129,3 +129,12 @@ canvas#fx{position:absolute;inset:0;width:100%;height:100%;pointer-events:none;z
   .egg-idle,.hint svg,.headline .hb .ch,.flame{animation:none!important}
   .opened .peek-head .nod,.opened .photo{animation:none}
 }
+
+/* 標題區塊：在畫面頂端和蛋糕之間上下置中 */
+.headline{
+  bottom:calc(3% + min(37vw,185px) + 16px);
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+}
